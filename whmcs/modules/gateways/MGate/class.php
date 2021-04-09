@@ -60,6 +60,7 @@ class MGate {
 		curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
 		curl_setopt($curl, CURLOPT_POST, 1);
 		curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+	    	curl_setopt($curl, CURLOPT_HTTPHEADER, ['User-Agent: mGate'];
 		$data = curl_exec($curl);
 		curl_close($curl);
 		return json_decode($data, true);
