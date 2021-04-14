@@ -66,7 +66,7 @@ class MGate extends AbstractPayment
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($curl, CURLOPT_POST, 1);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, ['User-Agent: mGate'];
+        curl_setopt($curl, CURLOPT_HTTPHEADER, ['User-Agent: mGate']);
         $data = curl_exec($curl);
         curl_close($curl);
         return $data;
